@@ -19,12 +19,9 @@ Start:		;mov ah, 2509h			; Set new ISR(процедура обработки п�
 			mov al, 0ah
 			out 42h, al
 			
-			in al, 61h
+			in al, 61h				
 			or al, 3
 			out 61h, al
-			
-			mov ax, 4ch
-			int 21h
 			
 			;mov ax, 3100h			; TSR
 			;mov dx, offset EOP
