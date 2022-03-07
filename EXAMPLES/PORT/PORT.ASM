@@ -13,7 +13,7 @@ Start:		mov di, 0b800h
 
 Next:		in al, 60h		; read from keyboard port
 			stosw			; mov es:[di], ax
-			and di, 0FFFh 	; ???
+			and di, 0FFFh 	; ограничиваем адреса для печати (символы не выходят за пределы экрана)
 
 			mov cx, 0FFFFh
 			nop
